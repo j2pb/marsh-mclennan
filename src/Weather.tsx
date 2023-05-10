@@ -8,7 +8,6 @@ const Weather: React.FC<WeatherProps> = ({data}) => {
 
   return (
     <div>
-        
       <h1>Weather in {name}</h1>
       <p>Temperature: {temperature}°C</p>
       <p>Feels like: {feelsLike}°C</p>

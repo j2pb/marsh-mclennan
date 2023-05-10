@@ -1,4 +1,5 @@
 interface WeatherData {
+    coord: string;
     name: string;
     main: {
       temp: number;
@@ -7,6 +8,7 @@ interface WeatherData {
 }
 interface WeatherProps {
     data: {
+      coord: any;
       name: string;
       main: {
         temp: number;
