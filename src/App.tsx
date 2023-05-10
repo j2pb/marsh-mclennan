@@ -1,18 +1,19 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import axios from 'axios';
 import Weather from './Weather'
 import { WeatherData } from './Interfaces';
+import {WeatherApi} from "./Utils"
 
 function App() {
   const [data, setData] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [USState, setUSState] = useState('Washington');
 
   useEffect(() => {
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Washington&appid=${process.env.REACT_APP_API_KEY}`)
+    WeatherApi.getWeather(USState)
       .then(response => {
-        setData(response.data);
+        setData(response);
         setLoading(false);
       })
       .catch(error => {
