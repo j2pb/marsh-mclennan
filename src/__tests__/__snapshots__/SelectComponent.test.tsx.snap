@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectComponent should render correctly 1`] = `
+<select
+  onChange={[Function]}
+  value="California"
+>
+  <option
+    value="Washington"
+  >
+    Washington
+  </option>
+  <option
+    value="California"
+  >
+    California
+  </option>
+  <option
+    value="Florida"
+  >
+    Florida
+  </option>
+</select>
+`;

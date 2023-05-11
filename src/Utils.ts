@@ -1,8 +1,9 @@
 import axios, { AxiosResponse } from 'axios';
 import {WeatherData} from './Interfaces'
-const apiKey = process.env.REACT_APP_API_KEY
-const instance = axios.create({
-	baseURL: 'https://api.openweathermap.org/data/2.5/',
+export const apiKey = process.env.REACT_APP_API_KEY
+export const BASE_URL = 'https://api.openweathermap.org/data/2.5/'
+export const instance = axios.create({
+	baseURL: BASE_URL,
 	timeout: 15000,
 });
 
