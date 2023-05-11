@@ -9,6 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ```bash
 cp .env.example .env
 ```
+- Add the API_KEY to the .env file
 - Installs dependencies
 ```bash
 npm install
